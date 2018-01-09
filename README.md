@@ -1,9 +1,17 @@
-teamcity-radiator
+TeamCity Radiator
 =================
-
 Radiator for TeamCity broken builds. Shows failing and claimed builds.
 
-Call example: `http://localhost/{teamcity-hostname}/{project-group-id}`
+## Usage
+
+1. Build & run the service:
+
+```
+$ docker build -t teamcity-radiator .
+$ docker run -p 3000:3000 -it -d teamcity-radiator
+```
+
+2. Navigate to `http://localhost:3000/{teamcity-hostname}/{project-group-id}`
 
 Where:
 * `teamcity-hostname`: full hostname of your Teamcity server, eg "teamcity.mydomain.com"
